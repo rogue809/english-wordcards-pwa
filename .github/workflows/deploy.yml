@@ -4,7 +4,13 @@ on:
   push:
     branches:
       - main  # 设置为你的默认分支
-
+      
+# 添加这部分权限配置
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
